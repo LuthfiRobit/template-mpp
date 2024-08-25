@@ -1,0 +1,69 @@
+.page-banner-image-section {
+  position: relative;
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.page-banner-image-section .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.page-banner-image-section .image img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  filter: blur(5px); /* Adjust the blur effect as needed */
+  -webkit-filter: blur(5px); /* For Safari */
+}
+
+.page-banner-image-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(
+    5px
+  ); /* Optional: adds blur to the overlay background */
+}
+
+.page-banner-image-section .text-content {
+  color: white;
+}
+
+.page-banner-image-section .btn-primary {
+  background-color: #007bff; /* Adjust button color as needed */
+  border-color: #007bff; /* Adjust button border color as needed */
+}
+
+.page-banner-image-section .btn-primary:hover {
+  background-color: #0056b3; /* Adjust hover color as needed */
+  border-color: #004085; /* Adjust hover border color as needed */
+}
+
+.custom-outline {
+  --bs-btn-border-color: white; /* Change border color to white */
+  --bs-btn-hover-border-color: white; /* Change border color on hover to white */
+  --bs-btn-outline-color: white; /* Change text color of outline button to white */
+  --bs-btn-outline-hover-color: white; /* Change text color on hover to white */
+  --bs-btn-outline-hover-bg: transparent; /* Keep background transparent on hover */
+}
+
+.custom-outline:hover {
+  color: white; /* Ensure text color stays white on hover */
+  background-color: #18c868; /* Ensure background color stays transparent on hover */
+  border-color: white; /* Ensure border color stays white on hover */
+}
+
+/* Make the banner height responsive */
+@media (max-width: 767px) {
+  .page-banner-image-section {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+}
